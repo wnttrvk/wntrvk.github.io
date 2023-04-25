@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Top Gallery</title>
+        <link rel="stylesheet" href="meritstyle.css">
+    </head>
+    <body>
+        <div class="full-img" id="fullImgBox">
+            <img src="merit/fam.jpg" id="fullImg">
+            <span onclick="closeFullImg()">x</span>
+        </div>
+
+        <div class="img-gallery">
+            <img src="merit/fam.jpg" alt="pic1" onclick="openFullImg(this.src)">
+            <img src="merit/cam.jpg" alt="pic2" onclick="openFullImg(this.src)">
+            <img src="merit/award.jpg" alt="pic3" onclick="openFullImg(this.src)">
+            <img src="merit/vico.jpg" alt="pic4" onclick="openFullImg(this.src)">
+            <img src="merit/cam2.jpg" alt="pic5" onclick="openFullImg(this.src)">
+            <img src="merit/g4.jpg" alt="pic6" onclick="openFullImg(this.src)">
+        </div>
+
+
+        <script>
+
+            var fullImgBox = document.getElementById("fullImgBox")
+            var fullImg = document.getElementById("fullImg")
+
+            function openFullImg(pic){
+                fullImgBox.style.display = "flex";
+                fullImg.src = pic;
+            }
+
+            function closeFullImg(){
+                fullImgBox.style.display = "none";
+            }
+
+        </script>
+    </body>
+</html>
